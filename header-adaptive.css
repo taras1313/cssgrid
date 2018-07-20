@@ -1,0 +1,61 @@
+.header {
+	height: 30vh;
+	display: grid;
+	grid-template-columns: 10% 1fr 10%;
+	grid-template-rows: 1fr 35%;
+	grid-template-areas: 
+	
+	'. article1 .'
+	'. . .';
+}
+
+.article1 {
+	grid-area: article1;
+	display: grid;
+	grid-template-rows: 15% 1fr 1fr 15%;
+	grid-template-columns: 10% 10% 1fr 1fr 10% 10%;
+	grid-template-areas: 
+	'. . . . . .'
+	'. . article2 article2 . .'
+	'. a-sub1 a-sub1 a-sub2 a-sub2 .'
+	'. . . . . .';
+}
+
+.a-sub1 {
+	grid-area: a-sub1;
+}
+.a-sub2 {
+	grid-area: a-sub2;
+}
+
+@media screen and (max-width: 665px) {
+	.article1 {
+	grid-template-rows: 15% 1fr 1fr 1fr 10%;
+	grid-template-columns: 10% 1fr 10%;
+	grid-template-areas: 
+	'. . .'
+	'. article2 .'
+	'. a-sub1 .'
+	'. a-sub2 .'
+	'. . .';
+}
+}
+
+.article2 {
+	grid-area: article2;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: 'par1 par1 par1'
+						  'par1 par1 par1';
+}
+
+.par1 {
+	grid-area: par1;
+	align-self: center;
+    word-wrap: break-word;
+	padding: 10px;
+
+}
+
+/* word-wrap: break-word; */

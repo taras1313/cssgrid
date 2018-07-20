@@ -1,0 +1,143 @@
+.menu {
+	min-height: 15vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas: 'sub1 sub2 sub3 sub4';
+	padding-bottom: 8px;
+}
+
+.sub1 {
+	grid-area: sub1;
+	display: grid;
+	grid-template-rows: 30% 1fr 7%;
+	grid-template-areas: '.' 'sub1_block' '.';
+	
+}
+
+.sub1_block {
+	grid-area: sub1_block;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas: 'a-sub1 b-sub1 c-sub1';
+}
+
+.a-sub1 {
+	grid-area: a-sub1;
+	
+}
+
+.b-sub1 {
+	grid-area: b-sub1;
+	
+}
+
+.c-sub1 {
+	grid-area: c-sub1;
+	
+}
+
+
+.sub2 {
+	grid-area: sub2;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 30% 1fr 7%;
+	grid-template-areas: '.' 'sub2_block' '.'
+}
+
+.sub2_block {
+	grid-area: sub2_block;
+	display: grid;
+	grid: 1fr / 7% 1fr 7%;
+	grid-template-areas: '. sub2_1 .'
+}
+
+.sub2_1 {
+	grid-area: sub2_1;
+	display: grid;
+	grid: 20% 1fr 15% / 7% repeat(3, 1fr) 7%;
+	grid-template-areas: '. . . . .' '. sub2_a sub2_b sub2_c .' '. . . . .';
+}
+
+.sub2_a {
+	grid-area: sub2_a;
+}
+
+.sub2_b {
+	grid-area: sub2_b;
+}
+
+.sub2_c {
+	grid-area: sub2_c;
+}
+
+
+.sub3 {
+	grid-area: sub3;
+	display: grid;
+	grid: 30% 1fr 7% / 1fr;
+	grid-template-areas: '.' 'sub3_block' '.';
+}
+
+.sub3_block {
+	grid-area: sub3_block;
+	display: grid;
+	grid: 1fr / repeat(3, 1fr);
+	grid-template-areas: 'sub3_a . sub3_b';
+}
+
+.sub3_a {
+	grid-area: sub3_a;
+}
+
+.sub3_b {
+	grid-area: sub3_b;
+}
+
+.sub4 {
+	grid-area: sub4;
+	display: grid;
+	grid: 30% 1fr 10% / 1fr;
+	grid-template-areas: '.' 'sub4_block' '.';
+}
+
+.sub4_block {
+	grid-area: sub4_block;
+	display: grid;
+	grid: 1fr / 7% 1fr 7%;
+	grid-template-areas: '. sub4_1 .';
+}
+
+.sub4_1 {
+	grid-area: sub4_1;
+	display: grid;
+	grid: 15% 1fr 1fr / 7% 1fr 1fr 7%;
+	grid-template-areas: '. . . .' '. sub4_a sub4_b .' '. . . .';
+}
+
+.sub4_a {
+	grid-area: sub4_a;
+}
+
+.sub4_b {
+	grid-area: sub4_b;
+}
+
+@media screen and (max-width: 665px) {
+	.menu {
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 'sub1 sub2' 'sub3 sub4';
+}
+}
+
+@media screen and (max-width: 450px) {
+	.menu {
+	grid-template-columns: 1fr;
+	grid-template-areas: 'sub1' 'sub2' 'sub3' 'sub4';
+}
+
+	.sub1,.sub2,.sub3,.sub4 {
+		height: 15vh;
+	}
+}
+/* чому не працює на телефоні */

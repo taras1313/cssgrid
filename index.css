@@ -1,0 +1,51 @@
+body {
+	max-width: 900px;
+	margin: 0 auto;
+	color: white;
+}
+
+.container {
+	margin-top: 20px;
+	border: 2px solid red;
+	padding: 1px;
+}
+
+.center {
+	text-align: center;
+}
+
+.footer {
+	height: 15vh;
+}
+
+@media screen and (max-width:665px) {
+	.footer {
+		margin-top: 8px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
